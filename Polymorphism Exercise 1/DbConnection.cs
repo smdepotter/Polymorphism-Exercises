@@ -12,7 +12,7 @@ namespace Polymorphism_Exercise_1
         protected DbConnection(string connectionString)
         {
 
-            if (connectionString == "" || connectionString == " ")
+            if (string.IsNullOrWhiteSpace(connectionString))
                 throw new InvalidOperationException("Please send a connection string that isn't null or blank");
 
             //replaced TimeSpan with Stopwatch

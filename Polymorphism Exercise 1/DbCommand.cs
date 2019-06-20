@@ -11,7 +11,7 @@ namespace Polymorphism_Exercise_1
 
         public DbCommand(DbConnection dbConnection, string instruction)
         {
-            if (instruction == null || instruction == " ")
+            if (string.IsNullOrWhiteSpace(instruction))
                 throw new InvalidOperationException("Please provide an instruction");
 
             _dbConnection = dbConnection ?? throw new InvalidOperationException("Please provide a connection");

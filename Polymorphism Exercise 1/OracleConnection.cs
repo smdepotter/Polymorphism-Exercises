@@ -10,7 +10,7 @@ namespace Polymorphism_Exercise_1
 
         public override void Open()
         {
-            Console.WriteLine("Opening Connections for Oracle");
+            Console.WriteLine("Opening Connection for Oracle");
         }
 
         public override void Close()

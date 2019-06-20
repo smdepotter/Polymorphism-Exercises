@@ -1,15 +1,20 @@
-﻿namespace Polymorphism_Exercise_1
+﻿using System;
+
+namespace Polymorphism_Exercise_1
 {
     class Program
     {
-        static void Main(string[] args)
+        
+
+        static void Main()
         {
-            var sql = new SqlConnection("Open");
-            var oracle = new OracleConnection("Open");
-            sql.Open();
-            sql.Close();
-            oracle.Open();
-            oracle.Close();
+            var sqlDb = new DbCommand(new SqlConnection("Open"), "DoSQLStuff");
+            sqlDb.Execute();
+
+            var oracleDb = new DbCommand(new OracleConnection("Open"), "DoOracleStuff");
+            oracleDb.Execute();
+
+
 
         }
     }
